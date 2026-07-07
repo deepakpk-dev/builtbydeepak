@@ -48,6 +48,40 @@ export const timeline: TimelineEntry[] = [
   },
 ];
 
+export type MarketingService = {
+  title: string;
+  body: string;
+  skills: string[];
+};
+
+export const marketing = {
+  intro:
+    "The first eight years didn't disappear. Before I wrote production code, I ran marketing for brands and agency clients — owning budgets, funnels, and growth targets. I take on select freelance marketing projects, and it's a rare combination: a marketer who can also build your landing pages, tracking, and automations.",
+  availability: "Available for freelance marketing projects — remote",
+  services: [
+    {
+      title: "Performance marketing & paid ads",
+      body: "Full-funnel campaigns on Google Ads (Search, Shopping, Display, YouTube), Meta (Facebook & Instagram), LinkedIn, and Amazon Ads. Budget management, bid strategy, and continuous optimization — I've lifted a client's lead generation 10× and sustained positive ROAS on six-figure budgets.",
+      skills: ["Google Ads", "Meta Ads", "LinkedIn Ads", "Amazon Ads", "Google Shopping", "Remarketing"],
+    },
+    {
+      title: "SEO & content",
+      body: "Keyword research, on-page optimization, technical site audits, and content strategy that compounds. Backed by the engineering skills to actually fix what the audit finds — Core Web Vitals, structured data, site architecture.",
+      skills: ["SEO", "Technical audits", "Content strategy", "Core Web Vitals"],
+    },
+    {
+      title: "Analytics & CRO",
+      body: "GA4 and Looker Studio dashboards that turn data into decisions. Conversion rate optimization through A/B testing, audience segmentation, landing page design, and funnel analysis — hundreds of tests run.",
+      skills: ["GA4", "Looker Studio", "A/B testing", "CRO", "Conversion tracking"],
+    },
+    {
+      title: "Branding & strategy",
+      body: "Brand positioning, go-to-market strategy, value-proposition messaging, and integrated campaign planning across paid, social, email, and events. Led brand marketing end-to-end as Head of Marketing at a D2C brand.",
+      skills: ["Brand strategy", "GTM", "Positioning", "Email marketing", "Marketing automation"],
+    },
+  ] satisfies MarketingService[],
+};
+
 export type Principle = {
   title: string;
   body: string;
