@@ -44,6 +44,18 @@ body {
   color: var(--on-accent);
 }
 
+/* Below md the hero's second line can wrap, so its absolute strike bar would
+   land between rows. Use native line-through instead — set on the split char
+   spans too, since text-decoration doesn't propagate into inline-blocks. */
+@media (max-width: 767px) {
+  [data-line-strike],
+  [data-line-strike] span {
+    text-decoration: line-through;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 0.075em;
+  }
+}
+
 @keyframes marquee {
   to {
     transform: translateX(-100%);

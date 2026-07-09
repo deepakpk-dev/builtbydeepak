@@ -172,12 +172,14 @@ export default function Hero() {
             </span>
           </span>
           <span data-line-wrap className="block overflow-hidden pb-[0.08em]">
-            <span data-line className="relative inline-block text-muted">
+            {/* Below md the line can wrap, so the absolute bar would land between
+                rows — use native line-through there and the animated bar from md up. */}
+            <span data-line data-line-strike className="relative inline-block text-muted">
               {site.hero.lineTwo}
               <span
                 data-strike
                 aria-hidden
-                className="absolute left-[-1%] top-1/2 h-[0.075em] w-[102%] -translate-y-1/2 rounded-full bg-accent"
+                className="absolute left-[-1%] top-1/2 hidden h-[0.075em] w-[102%] -translate-y-1/2 rounded-full bg-accent md:block"
               />
             </span>
           </span>
